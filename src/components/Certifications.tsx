@@ -5,39 +5,39 @@ import { Award, Calendar, ArrowUp } from 'lucide-react';
 const Certifications = () => {
   const certifications = [
     {
-      title: "Data Analysis with Python",
-      issuer: "Coursera - IBM",
+      title: "Microsoft Certified: Azure Data Fundamentals",
+      issuer: "Microsoft",
       date: "2024",
-      description: "Comprehensive course covering data manipulation, analysis, and visualization using Python libraries including Pandas, NumPy, and Matplotlib.",
-      skills: ["Python", "Pandas", "NumPy", "Data Visualization", "Statistical Analysis"],
-      credentialUrl: "https://coursera.org/verify/XXXXXXXX",
+      description: "Demonstrated foundational knowledge of core data concepts and Microsoft Azure data services. Covered relational and non-relational data, analytics workloads, and data governance principles.",
+      skills: ["Azure", "Data Analytics", "Cloud Computing", "Data Governance", "SQL"],
+      credentialUrl: "https://learn.microsoft.com/en-us/certifications/azure-data-fundamentals/",
       featured: true
     },
     {
-      title: "Power BI Data Analytics",
-      issuer: "Microsoft Learn",
+      title: "Power BI Data Analyst Associate",
+      issuer: "Microsoft",
       date: "2024",
-      description: "Advanced certification in Power BI for business intelligence, dashboard creation, and data modeling techniques.",
-      skills: ["Power BI", "DAX", "Data Modeling", "Business Intelligence", "Dashboard Design"],
-      credentialUrl: "https://learn.microsoft.com/verify/XXXXXXXX",
+      description: "Advanced certification demonstrating expertise in transforming data into actionable insights using Power BI. Specialized in creating comprehensive business intelligence solutions.",
+      skills: ["Power BI", "DAX", "Power Query", "Data Modeling", "Business Intelligence"],
+      credentialUrl: "https://learn.microsoft.com/en-us/certifications/power-bi-data-analyst-associate/",
       featured: true
     },
     {
-      title: "Introduction to Blockchain Technology",
-      issuer: "NPTEL",
-      date: "2023",
-      description: "Foundational course on blockchain principles, cryptocurrency, and decentralized applications development.",
-      skills: ["Blockchain", "Ethereum", "Smart Contracts", "Cryptography"],
-      credentialUrl: "https://nptel.ac.in/verify/XXXXXXXX",
-      featured: false
+      title: "Google Data Analytics Professional Certificate",
+      issuer: "Google Career Certificates",
+      date: "2024",
+      description: "Comprehensive program covering the entire data analysis process from data collection to presentation. Gained hands-on experience with industry-standard tools and methodologies.",
+      skills: ["R Programming", "SQL", "Tableau", "Data Cleaning", "Statistical Analysis"],
+      credentialUrl: "https://grow.google/certificates/data-analytics/",
+      featured: true
     },
     {
-      title: "SQL for Data Science",
-      issuer: "Udemy",
+      title: "Introduction to Blockchain and Cryptocurrency",
+      issuer: "NPTEL - IIT Kharagpur",
       date: "2023",
-      description: "Advanced SQL techniques for data extraction, transformation, and analysis from complex databases.",
-      skills: ["SQL", "Database Design", "Query Optimization", "Data Extraction"],
-      credentialUrl: "https://udemy.com/verify/XXXXXXXX",
+      description: "Academic certification covering blockchain fundamentals, cryptocurrency mechanisms, and smart contract development. Achieved distinction grade with hands-on project implementation.",
+      skills: ["Blockchain", "Ethereum", "Smart Contracts", "Cryptography", "DeFi"],
+      credentialUrl: "https://nptel.ac.in/courses/106105220",
       featured: false
     }
   ];
@@ -47,11 +47,11 @@ const Certifications = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Certifications
+            Professional Certifications
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-8"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Continuous learning through industry-recognized certifications in data analytics and emerging technologies
+            Industry-recognized certifications validating expertise in data analytics, cloud computing, and emerging technologies
           </p>
         </div>
 

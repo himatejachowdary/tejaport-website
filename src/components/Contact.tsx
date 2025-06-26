@@ -5,8 +5,8 @@ const Contact = () => {
   const contactInfo = [
     {
       label: "Email",
-      value: "Add your email manually",
-      href: "mailto:your.email@example.com"
+      value: "himatejacherukumalli0@gmail.com",
+      href: "mailto:himatejacherukumalli0@gmail.com"
     },
     {
       label: "Location",
@@ -30,7 +30,7 @@ const Contact = () => {
     },
     {
       name: "Email",
-      url: "mailto:your.email@example.com",
+      url: "mailto:himatejacherukumalli0@gmail.com",
       icon: Mail,
       color: "hover:text-green-400"
     }

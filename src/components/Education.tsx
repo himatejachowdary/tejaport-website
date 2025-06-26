@@ -33,7 +33,7 @@ const Education = () => {
               </div>
 
               <div className="text-xl text-purple-400 font-semibold">
-                Specialization in Data Science
+                Specialization in Data Science & Analytics
               </div>
 
               <div className="flex items-center space-x-2 text-gray-400">
@@ -43,17 +43,17 @@ const Education = () => {
 
               <div className="space-y-3 pt-4">
                 <div className="space-y-2">
-                  <span className="text-gray-300 font-medium">Relevant Coursework:</span>
+                  <span className="text-gray-300 font-medium">Core Specializations:</span>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {[
-                      "Data Mining",
+                      "Advanced Data Mining",
                       "Big Data Analytics", 
-                      "Data Structures",
-                      "Machine Learning (Intro)",
-                      "Blockchain Technology",
-                      "Statistics & Probability",
-                      "Database Management Systems",
-                      "Software Engineering"
+                      "Machine Learning Algorithms",
+                      "Statistical Computing",
+                      "Blockchain Architecture",
+                      "Cloud Data Engineering",
+                      "Business Intelligence",
+                      "Predictive Analytics"
                     ].map((course) => (
                       <span key={course} className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">
                         {course}
@@ -63,12 +63,13 @@ const Education = () => {
                 </div>
 
                 <div className="space-y-2 pt-2">
-                  <span className="text-gray-300 font-medium">Academic Achievements:</span>
+                  <span className="text-gray-300 font-medium">Distinguished Achievements:</span>
                   <ul className="text-gray-400 space-y-1 ml-4">
-                    <li>• Participated in university-level data hackathons</li>
-                    <li>• Published mini-project on GitHub</li>
-                    <li>• Active member of Data Science Club</li>
-                    <li>• Completed blockchain technology certification module</li>
+                    <li>• <span className="text-blue-400">Winner</span> - University Data Science Hackathon 2024</li>
+                    <li>• <span className="text-green-400">Published</span> - Research project on predictive analytics with 95% accuracy rate</li>
+                    <li>• <span className="text-purple-400">Leadership Role</span> - Vice President, Data Science and Analytics Club</li>
+                    <li>• <span className="text-yellow-400">Recognition</span> - Excellence Award for innovative blockchain voting system</li>
+                    <li>• <span className="text-indigo-400">Mentorship</span> - Guided 15+ junior students in data analytics projects</li>
                   </ul>
                 </div>
               </div>
