@@ -5,31 +5,31 @@ import { Github, ArrowUp } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "Fake News Detection using NLP",
-      description: "Built an advanced machine learning model using Python and NLP libraries to detect fake news with 94% accuracy. Implemented BERT transformers and traditional ML algorithms for comparison.",
-      technologies: ["Python", "BERT", "Scikit-learn", "NLTK", "Pandas"],
-      githubUrl: "https://github.com/yourusername/fake-news-detection",
+      title: "Sales Forecasting using Time Series Analysis",
+      description: "Built a comprehensive sales forecasting model using Python and ARIMA methodology. Analyzed historical sales data to predict future trends with high accuracy, incorporating seasonal patterns and market fluctuations.",
+      technologies: ["Python", "ARIMA", "Pandas", "Matplotlib", "Scikit-learn"],
+      githubUrl: "https://github.com/himateja/sales-forecasting",
       featured: true
     },
     {
-      title: "Stock Price Prediction with LSTM",
-      description: "Developed a deep learning model using LSTM neural networks to predict stock prices. Achieved improved prediction accuracy through feature engineering and time series analysis.",
-      technologies: ["TensorFlow", "Keras", "Python", "Matplotlib", "Yahoo Finance API"],
-      githubUrl: "https://github.com/yourusername/stock-prediction",
+      title: "Customer Segmentation Dashboard",
+      description: "Developed an interactive Power BI dashboard for customer segmentation analysis. Used clustering algorithms to identify distinct customer groups and created visualizations for business decision-making.",
+      technologies: ["Power BI", "Python", "K-Means", "Pandas", "DAX"],
+      githubUrl: "https://github.com/himateja/customer-segmentation",
       featured: true
     },
     {
-      title: "Image Classification CNN",
-      description: "Created a convolutional neural network for multi-class image classification. Implemented data augmentation and transfer learning techniques to improve model performance.",
-      technologies: ["TensorFlow", "Keras", "OpenCV", "Python", "NumPy"],
-      githubUrl: "https://github.com/yourusername/image-classification",
+      title: "Blockchain Voting System",
+      description: "Academic project exploring decentralized voting using Ethereum blockchain. Implemented smart contracts with Solidity to ensure transparent and tamper-proof voting mechanisms.",
+      technologies: ["Solidity", "Ethereum", "MetaMask", "Ganache", "Web3.js"],
+      githubUrl: "https://github.com/himateja/blockchain-voting",
       featured: false
     },
     {
-      title: "Recommendation System",
-      description: "Built a collaborative filtering recommendation system using matrix factorization techniques. Integrated content-based filtering for hybrid recommendations.",
-      technologies: ["Python", "Scikit-learn", "Pandas", "Surprise", "Flask"],
-      githubUrl: "https://github.com/yourusername/recommendation-system",
+      title: "COVID-19 Data Analysis",
+      description: "Comprehensive analysis of COVID-19 data trends using Python. Created interactive visualizations to track infection rates, recovery patterns, and vaccination progress across different regions.",
+      technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter"],
+      githubUrl: "https://github.com/himateja/covid19-analysis",
       featured: false
     }
   ];
@@ -43,7 +43,7 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-8"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Showcasing my expertise in AI/ML through hands-on projects and real-world applications
+            Showcasing my expertise in data analytics and blockchain through academic projects and real-world applications
           </p>
         </div>
 
@@ -101,7 +101,7 @@ const Projects = () => {
 
         <div className="text-center mt-12">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/himateja"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"

@@ -5,39 +5,39 @@ import { Award, Calendar, ArrowUp } from 'lucide-react';
 const Certifications = () => {
   const certifications = [
     {
-      title: "Deep Learning Specialization",
-      issuer: "Coursera - deeplearning.ai",
-      date: "2023",
-      description: "Comprehensive specialization covering neural networks, deep learning, and their applications in computer vision and NLP.",
-      skills: ["Neural Networks", "CNN", "RNN", "TensorFlow", "Keras"],
-      credentialUrl: "https://coursera.org/verify/specialization/XXXXXXXX",
-      featured: true
-    },
-    {
-      title: "Machine Learning Course",
-      issuer: "Coursera - Stanford University",
-      date: "2023",
-      description: "Andrew Ng's foundational machine learning course covering supervised and unsupervised learning algorithms.",
-      skills: ["Supervised Learning", "Unsupervised Learning", "Neural Networks", "Octave/MATLAB"],
+      title: "Data Analysis with Python",
+      issuer: "Coursera - IBM",
+      date: "2024",
+      description: "Comprehensive course covering data manipulation, analysis, and visualization using Python libraries including Pandas, NumPy, and Matplotlib.",
+      skills: ["Python", "Pandas", "NumPy", "Data Visualization", "Statistical Analysis"],
       credentialUrl: "https://coursera.org/verify/XXXXXXXX",
       featured: true
     },
     {
-      title: "TensorFlow Developer Certificate",
-      issuer: "TensorFlow",
+      title: "Power BI Data Analytics",
+      issuer: "Microsoft Learn",
       date: "2024",
-      description: "Demonstrates proficiency in using TensorFlow to solve deep learning and ML problems.",
-      skills: ["TensorFlow", "Deep Learning", "Computer Vision", "NLP"],
-      credentialUrl: "https://www.credential.net/xxxxxxxx",
+      description: "Advanced certification in Power BI for business intelligence, dashboard creation, and data modeling techniques.",
+      skills: ["Power BI", "DAX", "Data Modeling", "Business Intelligence", "Dashboard Design"],
+      credentialUrl: "https://learn.microsoft.com/verify/XXXXXXXX",
+      featured: true
+    },
+    {
+      title: "Introduction to Blockchain Technology",
+      issuer: "NPTEL",
+      date: "2023",
+      description: "Foundational course on blockchain principles, cryptocurrency, and decentralized applications development.",
+      skills: ["Blockchain", "Ethereum", "Smart Contracts", "Cryptography"],
+      credentialUrl: "https://nptel.ac.in/verify/XXXXXXXX",
       featured: false
     },
     {
-      title: "Python for Data Science",
-      issuer: "IBM - Coursera",
-      date: "2022",
-      description: "Comprehensive course on using Python for data analysis, visualization, and machine learning.",
-      skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Scikit-learn"],
-      credentialUrl: "https://coursera.org/verify/XXXXXXXX",
+      title: "SQL for Data Science",
+      issuer: "Udemy",
+      date: "2023",
+      description: "Advanced SQL techniques for data extraction, transformation, and analysis from complex databases.",
+      skills: ["SQL", "Database Design", "Query Optimization", "Data Extraction"],
+      credentialUrl: "https://udemy.com/verify/XXXXXXXX",
       featured: false
     }
   ];
@@ -51,7 +51,7 @@ const Certifications = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-8"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Continuous learning through industry-recognized certifications and specializations
+            Continuous learning through industry-recognized certifications in data analytics and emerging technologies
           </p>
         </div>
 

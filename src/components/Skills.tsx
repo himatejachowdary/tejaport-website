@@ -7,36 +7,35 @@ const Skills = () => {
       title: "Programming Languages",
       skills: [
         { name: "Python", level: 90 },
-        { name: "C++", level: 80 },
         { name: "Java", level: 75 },
         { name: "SQL", level: 85 }
       ]
     },
     {
-      title: "AI/ML Frameworks",
+      title: "Data Analytics Tools",
       skills: [
-        { name: "TensorFlow", level: 85 },
-        { name: "Scikit-learn", level: 90 },
-        { name: "Keras", level: 80 },
-        { name: "PyTorch", level: 70 }
+        { name: "Power BI", level: 85 },
+        { name: "Tableau", level: 80 },
+        { name: "Excel", level: 90 },
+        { name: "Jupyter", level: 95 }
       ]
     },
     {
-      title: "Tools & Technologies",
-      skills: [
-        { name: "Git", level: 85 },
-        { name: "Jupyter", level: 95 },
-        { name: "VS Code", level: 90 },
-        { name: "Google Colab", level: 90 }
-      ]
-    },
-    {
-      title: "Data Science",
+      title: "Data Analysis Libraries",
       skills: [
         { name: "Pandas", level: 90 },
         { name: "NumPy", level: 85 },
         { name: "Matplotlib", level: 80 },
         { name: "Seaborn", level: 75 }
+      ]
+    },
+    {
+      title: "Blockchain & Tools",
+      skills: [
+        { name: "Ethereum Basics", level: 60 },
+        { name: "Solidity", level: 45 },
+        { name: "MetaMask", level: 70 },
+        { name: "Ganache", level: 55 }
       ]
     }
   ];
@@ -50,7 +49,7 @@ const Skills = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-8"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            A comprehensive toolkit for building intelligent systems and solving complex problems
+            A comprehensive toolkit for data analysis, visualization, and emerging blockchain technologies
           </p>
         </div>
 

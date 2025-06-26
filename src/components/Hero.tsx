@@ -20,17 +20,17 @@ const Hero = () => {
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Your Full Name
+              Hima Teja Cherukumalli
             </span>
           </h1>
           
           <h2 className="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
-            AI Enthusiast & Final-Year CS Student
+            Data Analytics Enthusiast & CSE Student
           </h2>
           
           <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Passionate about artificial intelligence, machine learning, and data science. 
-            Building the future with deep learning and cutting-edge AI technologies.
+            Passionate about data analytics, insights generation, and solving real-world problems using data. 
+            Detail-oriented analytical thinker with expertise in Python, data visualization, and blockchain technology.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

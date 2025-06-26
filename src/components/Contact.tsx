@@ -1,44 +1,39 @@
 
 import React from 'react';
-import { Github, Linkedin, Youtube } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Contact = () => {
   const contactInfo = [
     {
       label: "Email",
-      value: "your.email@example.com",
+      value: "Add your email manually",
       href: "mailto:your.email@example.com"
     },
     {
-      label: "Phone",
-      value: "+91 XXXXX XXXXX", 
-      href: "tel:+91XXXXXXXXXX"
-    },
-    {
       label: "Location",
-      value: "Your City, India",
+      value: "Hyderabad, India",
       href: "#"
     }
   ];
 
   const socialLinks = [
     {
-      name: "GitHub",
-      url: "https://github.com/yourusername",
-      icon: Github,
-      color: "hover:text-gray-300"
-    },
-    {
-      name: "LinkedIn", 
-      url: "https://linkedin.com/in/yourusername",
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/himatejacherukumalli/",
       icon: Linkedin,
       color: "hover:text-blue-400"
     },
     {
-      name: "YouTube",
-      url: "https://youtube.com/@yourusername",
-      icon: Youtube,
-      color: "hover:text-red-400"
+      name: "GitHub", 
+      url: "https://www.linkedin.com/in/himatejacherukumalli/",
+      icon: Github,
+      color: "hover:text-gray-300"
+    },
+    {
+      name: "Email",
+      url: "mailto:your.email@example.com",
+      icon: Mail,
+      color: "hover:text-green-400"
     }
   ];
 
@@ -51,7 +46,7 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-8"></div>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            I'm always excited to discuss AI, collaborate on projects, or explore new opportunities. 
+            I'm always excited to discuss data analytics, collaborate on projects, or explore new opportunities. 
             Feel free to reach out!
           </p>
         </div>
@@ -151,7 +146,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-slate-700">
           <p className="text-gray-400">
-            © 2024 Your Full Name. Built with passion for AI and innovation.
+            © 2024 Hima Teja Cherukumalli. Built with passion for data analytics and innovation.
           </p>
         </div>
       </div>

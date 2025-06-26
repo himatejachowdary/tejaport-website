@@ -1,23 +1,23 @@
 
 import React from 'react';
-import { Brain, Code, Database } from 'lucide-react';
+import { BarChart3, Code, Database } from 'lucide-react';
 
 const About = () => {
   const highlights = [
     {
-      icon: Brain,
-      title: "AI & Machine Learning",
-      description: "Deep expertise in neural networks, deep learning, and AI model development"
+      icon: BarChart3,
+      title: "Data Analytics & Visualization",
+      description: "Expert in generating insights from complex datasets using Python, Power BI, and Tableau"
     },
     {
       icon: Code,
-      title: "Software Development",
-      description: "Strong foundation in Python, C++, and modern development practices"
+      title: "Programming & Development",
+      description: "Strong foundation in Python, Java, SQL with focus on data-driven solutions"
     },
     {
       icon: Database,
-      title: "Data Science",
-      description: "Proficient in data analysis, visualization, and statistical modeling"
+      title: "Blockchain Technology",
+      description: "Exploring decentralized technologies with Ethereum basics and Solidity development"
     }
   ];
 
@@ -34,19 +34,18 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-300 leading-relaxed">
-              I'm a passionate final-year B.Tech Computer Science student specializing in Artificial Intelligence. 
-              My journey in technology is driven by curiosity and the desire to solve real-world problems using AI.
+              I'm Hima Teja Cherukumalli, a passionate B.Tech Computer Science student specializing in Data Science. 
+              My journey revolves around transforming raw data into meaningful insights that drive real-world solutions.
             </p>
             
             <p className="text-lg text-gray-300 leading-relaxed">
-              With a strong foundation in Python, TensorFlow, and deep learning, I'm constantly exploring 
-              new frontiers in machine learning and data science. I believe AI has the power to transform 
-              industries and improve lives.
+              As a detail-oriented and analytical thinker, I combine my strong foundation in statistics and Python 
+              with modern data visualization tools like Power BI and Tableau to uncover hidden patterns and trends in data.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              When I'm not coding or training models, you'll find me writing about AI concepts, 
-              contributing to open-source projects, or exploring the latest research papers in machine learning.
+              Beyond data analytics, I'm exploring the fascinating world of blockchain technology, understanding 
+              how decentralized systems can revolutionize data integrity and transparency across industries.
             </p>
           </div>
 

@@ -24,41 +24,36 @@ const Education = () => {
             <div className="space-y-4">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <h3 className="text-2xl font-bold text-white">
-                  Bachelor of Technology in Computer Science
+                  Bachelor of Technology in Computer Science and Engineering
                 </h3>
                 <div className="flex items-center space-x-2 text-blue-400">
                   <Calendar size={16} />
-                  <span className="text-sm font-medium">2021 - 2025</span>
+                  <span className="text-sm font-medium">2023 - 2027</span>
                 </div>
               </div>
 
               <div className="text-xl text-purple-400 font-semibold">
-                Specialization in Artificial Intelligence
+                Specialization in Data Science
               </div>
 
               <div className="flex items-center space-x-2 text-gray-400">
                 <MapPin size={16} />
-                <span>Your University Name, Your City</span>
+                <span>Malla Reddy University, Hyderabad</span>
               </div>
 
               <div className="space-y-3 pt-4">
-                <div className="flex flex-col md:flex-row md:items-center gap-2">
-                  <span className="text-gray-300 font-medium">Current CGPA:</span>
-                  <span className="text-blue-400 font-semibold">8.5/10.0</span>
-                </div>
-
                 <div className="space-y-2">
-                  <span className="text-gray-300 font-medium">Key Coursework:</span>
+                  <span className="text-gray-300 font-medium">Relevant Coursework:</span>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {[
-                      "Machine Learning",
-                      "Deep Learning", 
-                      "Natural Language Processing",
-                      "Computer Vision",
-                      "Data Structures & Algorithms",
+                      "Data Mining",
+                      "Big Data Analytics", 
+                      "Data Structures",
+                      "Machine Learning (Intro)",
+                      "Blockchain Technology",
+                      "Statistics & Probability",
                       "Database Management Systems",
-                      "Software Engineering",
-                      "Statistics & Probability"
+                      "Software Engineering"
                     ].map((course) => (
                       <span key={course} className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">
                         {course}
@@ -70,9 +65,10 @@ const Education = () => {
                 <div className="space-y-2 pt-2">
                   <span className="text-gray-300 font-medium">Academic Achievements:</span>
                   <ul className="text-gray-400 space-y-1 ml-4">
-                    <li>• Dean's List for Academic Excellence (2022-2023)</li>
-                    <li>• Best Project Award for AI-based solution</li>
-                    <li>• Active member of AI/ML Club</li>
+                    <li>• Participated in university-level data hackathons</li>
+                    <li>• Published mini-project on GitHub</li>
+                    <li>• Active member of Data Science Club</li>
+                    <li>• Completed blockchain technology certification module</li>
                   </ul>
                 </div>
               </div>
