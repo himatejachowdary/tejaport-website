@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
@@ -25,7 +24,7 @@ const Contact = () => {
     },
     {
       name: "GitHub", 
-      url: "https://www.linkedin.com/in/himatejacherukumalli/",
+      url: "https://github.com/himatejachowdary",
       icon: Github,
       color: "hover:text-gray-300"
     },

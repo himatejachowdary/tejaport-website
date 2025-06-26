@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github, ArrowUp } from 'lucide-react';
 
@@ -8,28 +7,28 @@ const Projects = () => {
       title: "Sales Forecasting using Time Series Analysis",
       description: "Built a comprehensive sales forecasting model using Python and ARIMA methodology. Analyzed historical sales data to predict future trends with high accuracy, incorporating seasonal patterns and market fluctuations.",
       technologies: ["Python", "ARIMA", "Pandas", "Matplotlib", "Scikit-learn"],
-      githubUrl: "https://github.com/himateja/sales-forecasting",
+      githubUrl: "https://github.com/himatejachowdary/sales-forecasting",
       featured: true
     },
     {
       title: "Customer Segmentation Dashboard",
       description: "Developed an interactive Power BI dashboard for customer segmentation analysis. Used clustering algorithms to identify distinct customer groups and created visualizations for business decision-making.",
       technologies: ["Power BI", "Python", "K-Means", "Pandas", "DAX"],
-      githubUrl: "https://github.com/himateja/customer-segmentation",
+      githubUrl: "https://github.com/himatejachowdary/customer-segmentation",
       featured: true
     },
     {
       title: "Blockchain Voting System",
       description: "Academic project exploring decentralized voting using Ethereum blockchain. Implemented smart contracts with Solidity to ensure transparent and tamper-proof voting mechanisms.",
       technologies: ["Solidity", "Ethereum", "MetaMask", "Ganache", "Web3.js"],
-      githubUrl: "https://github.com/himateja/blockchain-voting",
+      githubUrl: "https://github.com/himatejachowdary/blockchain-voting",
       featured: false
     },
     {
       title: "COVID-19 Data Analysis",
       description: "Comprehensive analysis of COVID-19 data trends using Python. Created interactive visualizations to track infection rates, recovery patterns, and vaccination progress across different regions.",
       technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter"],
-      githubUrl: "https://github.com/himateja/covid19-analysis",
+      githubUrl: "https://github.com/himatejachowdary/covid19-analysis",
       featured: false
     }
   ];
@@ -101,7 +100,7 @@ const Projects = () => {
 
         <div className="text-center mt-12">
           <a
-            href="https://github.com/himateja"
+            href="https://github.com/himatejachowdary"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
