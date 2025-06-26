@@ -8,6 +8,20 @@ const Hero = () => {
     aboutSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Convert Google Drive sharing link to direct download link
+  const handleResumeDownload = () => {
+    // Direct download link for your Google Drive file
+    const resumeUrl = 'https://drive.google.com/uc?export=download&id=1yehO1qScCs0da-gPLzfHcCLUykIz0Gf-';
+    
+    // Create a temporary link element and trigger download
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Hima_Teja_Cherukumalli_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated background elements */}
@@ -41,13 +55,12 @@ const Hero = () => {
               Explore My Work
             </button>
             
-            <a
-              href="/resume.pdf"
-              download
+            <button
+              onClick={handleResumeDownload}
               className="px-8 py-3 border-2 border-purple-400 text-purple-400 rounded-full font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               Download Resume
-            </a>
+            </button>
           </div>
         </div>
 
