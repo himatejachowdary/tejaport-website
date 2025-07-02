@@ -10,7 +10,7 @@ const Blog = () => {
       date: "March 15, 2024",
       readTime: "8 min read",
       tags: ["Neural Networks", "Deep Learning", "Beginner"],
-      url: "/blog/understanding-neural-networks"
+      url: "https://aws.amazon.com/what-is/neural-network/"
     },
     {
       title: "Generative Adversarial Networks (GANs) Explained",
