@@ -18,37 +18,50 @@ src/
 
 
 ---
+# Teja Portfolio Website 🌐
+
+A modern personal portfolio website for **Teja Cherukumalli**, built with **Vite**, **React**, **TypeScript**, **Tailwind CSS**, and **shadcn-ui**.
+
+🔗 **Live demo**: https://tejacherukumalli.me
+
+---
+
+## 📖 Description
+
+This project serves as my online portfolio, showcasing:
+- An interactive **About Me** section  
+- Featured **Projects** with live links and source code  
+- A **Contact** section  
+- Responsive and accessible UI design  
+- SEO-friendly metadata and smooth animations
+
+---
+
+## ⚙️ Tech Stack
+
+- **Vite** (fast build & dev server)  
+- **React** + **TypeScript**  
+- **Tailwind CSS** (custom styles & themes)  
+- **shadcn-ui** (component library)  
+- **Lovable** (AI-assisted editing & deployment)
+
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
-Make sure you have **Node.js** and **npm** installed. We recommend using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) for version management.
+- Node.js (via [nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
+- npm or yarn
 
 ### Installation
 
 ```bash
-# 1. Clone the repository
-git clone <YOUR_GIT_REPO_URL>
+# Clone repo
+git clone https://github.com/himatejachowdary/tejaport-website.git
+cd tejaport-website
 
-# 2. Navigate to the folder
-cd <project-folder>
-
-# 3. Install dependencies
+# Install dependencies
 npm install
 
-# 4. Start the development server
+# Run dev server
 npm run dev
-
-
-
-🧰 Technologies Used
-Vite
-
-React
-
-TypeScript
-
-Tailwind CSS
-
-shadcn/ui
