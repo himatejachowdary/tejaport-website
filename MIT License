@@ -1,0 +1,15 @@
+
+---
+
+### ✅ Next Steps
+
+- Add a `LICENSE` file with the full text of the MIT license.
+- Tag a release (e.g. `v1.0.0`) to denote first stable version.
+- Consider adding:
+  - **Changelog / Releases** section
+  - **Credits** for any third-party assets
+  - **FAQ** or **Known issues** (if needed)
+  - **Code of Conduct** (for community projects)
+
+Let me know if you'd like help generating the `LICENSE` file, adding a `CHANGELOG.md`, or drafting a **Code of Conduct**!
+::contentReference[oaicite:0]{index=0}
