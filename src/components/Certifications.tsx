@@ -23,13 +23,13 @@ const Certifications = () => {
       featured: true
     },
    {
-  title: "Android Developer Virtual Certificate",
-  issuer: "Google For Developers",
-  date: "2024",
-  description: "Completed Android App Development Internship at Google, showcasing hands-on experience in building mobile applications.",
-  skills: ["Android Development", "Java & Kotlin", "Firebase Integration", "UI/UX Design", "Google Developer Tools"],
-  credentialUrl: "https://www.linkedin.com/posts/himatejacherukumalli_android-internship-google-activity-7259859151583887361-7hBX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE04MlIBuWPvvIYtNfYp--0--ItENplktz8",
-  featured: true
+      title: "Android Developer Virtual Certificate",
+      issuer: "Google For Developers",
+      date: "2024",
+      description: "Completed Android App Development Internship at Google, showcasing hands-on experience in building mobile applications.",
+     skills: ["Android Development", "Java & Kotlin", "Firebase Integration", "UI/UX Design", "Google Developer Tools"],
+     credentialUrl: "https://www.linkedin.com/posts/himatejacherukumalli_android-internship-google-activity-7259859151583887361-7hBX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE04MlIBuWPvvIYtNfYp--0--ItENplktz8",
+     featured: true
 }
 
     {
