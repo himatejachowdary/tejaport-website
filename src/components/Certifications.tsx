@@ -7,34 +7,39 @@ const Certifications = () => {
       title: "Microsoft Certified: Azure Data Fundamentals",
       issuer: "Microsoft",
       date: "2024",
-      description: "Demonstrated foundational knowledge of core data concepts and Microsoft Azure data services. Covered relational and non-relational data, analytics workloads, and data governance principles.",
+      description:
+        "Demonstrated foundational knowledge of core data concepts and Microsoft Azure data services. Covered relational and non-relational data, analytics workloads, and data governance principles.",
       skills: ["Azure", "Data Analytics", "Cloud Computing", "Data Governance", "SQL"],
       credentialUrl: "https://learn.microsoft.com/en-us/certifications/azure-data-fundamentals/",
       featured: true
     },
     {
-      title: "Power BI Data Analyst Associate",
-      issuer: "Microsoft",
+      title: "AWS Academy Graduate - AWS Academy Cloud Architecting",
+      issuer: "Amazon Web Services (AWS)",
       date: "2024",
-      description: "Advanced certification demonstrating expertise in transforming data into actionable insights using Power BI. Specialized in creating comprehensive business intelligence solutions.",
-      skills: ["Power BI", "DAX", "Power Query", "Data Modeling", "Business Intelligence"],
-      credentialUrl: "https://learn.microsoft.com/en-us/certifications/power-bi-data-analyst-associate/",
+      description:
+        "Completed the AWS Academy Cloud Architecting course, gaining practical skills in designing resilient, high-performing, secure, and cost-optimized architectures on AWS. Covered services including EC2, S3, RDS, IAM, and VPC, along with architectural best practices.",
+      skills: ["AWS", "Cloud Architecture", "EC2", "VPC", "Solution Design", "Security"],
+      credentialUrl: "https://www.credly.com/badges/e2265021-5011-4847-86fd-ef20c301a59c/public_url",
       featured: true
     },
     {
       title: "Android Developer Virtual Certificate",
       issuer: "Google For Developers",
       date: "2024",
-      description: "Completed Android App Development Internship at Google, showcasing hands-on experience in building mobile applications.",
+      description:
+        "Completed Android App Development Internship at Google, showcasing hands-on experience in building mobile applications.",
       skills: ["Android Development", "Java & Kotlin", "Firebase Integration", "UI/UX Design", "Google Developer Tools"],
-      credentialUrl: "https://www.linkedin.com/posts/himatejacherukumalli_android-internship-google-activity-7259859151583887361-7hBX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE04MlIBuWPvvIYtNfYp--0--ItENplktz8/",
+      credentialUrl:
+        "https://www.linkedin.com/posts/himatejacherukumalli_android-internship-google-activity-7259859151583887361-7hBX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE04MlIBuWPvvIYtNfYp--0--ItENplktz8/",
       featured: true
     },
     {
       title: "Introduction to Blockchain and Cryptocurrency",
       issuer: "NPTEL - IIT Kharagpur",
       date: "2023",
-      description: "Academic certification covering blockchain fundamentals, cryptocurrency mechanisms, and smart contract development. Achieved distinction grade with hands-on project implementation.",
+      description:
+        "Academic certification covering blockchain fundamentals, cryptocurrency mechanisms, and smart contract development. Achieved distinction grade with hands-on project implementation.",
       skills: ["Blockchain", "Ethereum", "Smart Contracts", "Cryptography", "DeFi"],
       credentialUrl: "https://nptel.ac.in/courses/106105220",
       featured: false
@@ -55,7 +60,7 @@ const Certifications = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {certifications.map((cert, index) => (
+          {certifications.map((cert) => (
             <div
               key={cert.title}
               className={`group relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
@@ -90,9 +95,7 @@ const Certifications = () => {
                     </div>
                   </div>
 
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {cert.description}
-                  </p>
+                  <p className="text-gray-400 text-sm leading-relaxed">{cert.description}</p>
 
                   <div className="flex flex-wrap gap-2">
                     {cert.skills.map((skill) => (
@@ -114,7 +117,10 @@ const Certifications = () => {
                     >
                       View Credential
                     </a>
-                    <ArrowUp className="text-purple-400 transform rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" size={16} />
+                    <ArrowUp
+                      className="text-purple-400 transform rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+                      size={16}
+                    />
                   </div>
                 </div>
               </div>
