@@ -7,7 +7,7 @@ const Projects = () => {
       title: "Sales Forecasting using Time Series Analysis",
       description: "Built a comprehensive sales forecasting model using Python and ARIMA methodology. Analyzed historical sales data to predict future trends with high accuracy, incorporating seasonal patterns and market fluctuations.",
       technologies: ["Python", "ARIMA", "Pandas", "Matplotlib", "Scikit-learn"],
-      githubUrl: "https://github.com/himatejachowdary/sales-forecasting",
+      githubUrl: "https://himateja-sales-forecast.vercel.app/",
       featured: true
     },
     {
