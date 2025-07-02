@@ -26,7 +26,7 @@ const Blog = () => {
       date: "February 10, 2024",
       readTime: "10 min read", 
       tags: ["AI", "Healthcare", "Future Tech"],
-      url: "/blog/ai-in-healthcare"
+      url: "https://healthcare-bulletin.co.uk/article/the-role-of-artificial-intelligence-in-modern-healthcare-advances-challenges-and-future-prospects-3187/"
     }
   ];
 
