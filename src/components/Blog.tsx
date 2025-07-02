@@ -18,7 +18,7 @@ const Blog = () => {
       date: "February 28, 2024", 
       readTime: "12 min read",
       tags: ["GANs", "Generative AI", "Computer Vision"],
-      url: "https://aws.amazon.com/what-is/gan/"
+      url: "https://www.geeksforgeeks.org/generative-adversarial-network-gan/"
     },
     {
       title: "The Future of AI in Healthcare",
