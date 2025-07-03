@@ -21,8 +21,8 @@ const Projects = () => {
       title: "Blockchain Voting System",
       description: "Academic project exploring decentralized voting using Ethereum blockchain. Implemented smart contracts with Solidity to ensure transparent and tamper-proof voting mechanisms.",
       technologies: ["Solidity", "Ethereum", "MetaMask", "Ganache", "Web3.js"],
-      githubUrl: "https://github.com/himatejachowdary/blockchain-voting",
-      featured: false
+      githubUrl: "https://blockchain-voting-systems.netlify.app/",
+      featured: true
     },
     {
       title: "COVID-19 Data Analysis",
