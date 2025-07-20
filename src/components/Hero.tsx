@@ -11,7 +11,8 @@ const Hero = () => {
   // Convert Google Drive sharing link to direct download link
   const handleResumeDownload = () => {
     // Direct download link for your Google Drive file
-    const resumeUrl = 'https://drive.google.com/uc?export=download&id=1yehO1qScCs0da-gPLzfHcCLUykIz0Gf-';
+    const resumeUrl = 'https://drive.google.com/uc?export=download&id=1MlzsmPJRIKkudAwN0V-MQixmk5IYBDJd';
+
     
     // Create a temporary link element and trigger download
     const link = document.createElement('a');
