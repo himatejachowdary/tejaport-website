@@ -88,7 +88,7 @@ const Projects = () => {
                     className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300"
                   >
                     <Github size={20} />
-                    <span>View Code</span>
+                    <span>View Live Web</span>
                   </a>
                   
                   <ArrowUp className="text-purple-400 transform rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" size={20} />
