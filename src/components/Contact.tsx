@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -43,66 +42,51 @@ const Contact = () => {
     const [sending, setSending] = useState(false);
     const { toast } = useToast();
 
-    // ONLY 3 ENV variables required
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
     const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
-
       if (!formRef.current) return;
-
-      if (!serviceId || !templateId || !publicKey) {
-        toast({
-          title: 'Email not configured',
-          description: 'Set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY in your .env',
-          duration: 6000,
-        });
-        return;
-      }
 
       setSending(true);
 
-      const data = new FormData(formRef.current);
-      const templateParams: Record<string, any> = Object.fromEntries(data as any);
-
-      const senderEmail = templateParams.user_email || '';
-      const senderName = templateParams.user_name || '';
-
-      // Standard EmailJS naming support
-      templateParams.to_email = senderEmail;
-      templateParams.reply_to = senderEmail;
-      templateParams.from_name = senderName;
-      templateParams.from_email = senderEmail;
-      templateParams.name = senderName;
-      templateParams.email = senderEmail;
-      templateParams.subject = `Website message from ${senderName}`;
-      templateParams.sent_at = new Date().toISOString();
+      const formData = new FormData(formRef.current);
 
       try {
-        await emailjs.send(serviceId, templateId, templateParams, publicKey);
-
-        toast({
-          title: 'Message sent',
-          description: "Thanks — I'll get back to you soon.",
+        const response = await fetch("https://formspree.io/f/mnnwenzq", {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" },
         });
 
-        formRef.current.reset();
-
-      } catch (err) {
-        console.error('EmailJS error:', err);
+        if (response.ok) {
+          toast({
+            title: "Message sent",
+            description: "Thanks — I'll get back to you soon.",
+          });
+          formRef.current.reset();
+        } else {
+          toast({
+            title: "Send failed",
+            description: "Something went wrong. Try again later.",
+          });
+        }
+      } catch (error) {
         toast({
-          title: 'Send failed',
-          description: 'Could not send message. Try again later.',
+          title: "Send failed",
+          description: "Network issue. Try again later.",
         });
-      } finally {
-        setSending(false);
       }
+
+      setSending(false);
     };
 
     return (
-      <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="space-y-6"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+
         <div>
           <label htmlFor="name" className="block text-gray-300 text-sm font-medium mb-2">
             Name
@@ -150,7 +134,7 @@ const Contact = () => {
           disabled={sending}
           className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-60"
         >
-          {sending ? 'Sending...' : 'Send Message'}
+          {sending ? "Sending..." : "Send Message"}
         </button>
       </form>
     );
