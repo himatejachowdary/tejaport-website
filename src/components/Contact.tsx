@@ -43,72 +43,59 @@ const Contact = () => {
     const [sending, setSending] = useState(false);
     const { toast } = useToast();
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
-    const replyTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_REPLY as string | undefined;
+    // ONLY 3 ENV variables required
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
+
       if (!formRef.current) return;
 
       if (!serviceId || !templateId || !publicKey) {
-        toast({ title: 'Email not configured', description: 'Set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY in your .env', duration: 6000 });
+        toast({
+          title: 'Email not configured',
+          description: 'Set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY in your .env',
+          duration: 6000,
+        });
         return;
       }
 
       setSending(true);
+
       const data = new FormData(formRef.current);
       const templateParams: Record<string, any> = Object.fromEntries(data as any);
 
-      // Ensure common dynamic fields for templates that expect them
-      // EmailJS templates often use `to_email`, `reply_to`, or different variable names
-      const senderEmail = templateParams.user_email || templateParams.email || '';
-      const senderName = templateParams.user_name || templateParams.name || '';
+      const senderEmail = templateParams.user_email || '';
+      const senderName = templateParams.user_name || '';
 
-      // Common aliases so templates using different variable names get values
-      templateParams.to_email = templateParams.to_email || senderEmail;
-      templateParams.reply_to = templateParams.reply_to || senderEmail;
-      templateParams.from_name = templateParams.from_name || senderName;
-      templateParams.from_email = templateParams.from_email || senderEmail;
-      templateParams.name = templateParams.name || senderName;
-      templateParams.email = templateParams.email || senderEmail;
-      templateParams.subject = templateParams.subject || `Website message from ${senderName || senderEmail}`;
-      templateParams.sent_at = templateParams.sent_at || new Date().toISOString();
-
-      // Log params to help debugging in browser console (remove in production)
-      // eslint-disable-next-line no-console
-      console.log('Email template params:', templateParams);
+      // Standard EmailJS naming support
+      templateParams.to_email = senderEmail;
+      templateParams.reply_to = senderEmail;
+      templateParams.from_name = senderName;
+      templateParams.from_email = senderEmail;
+      templateParams.name = senderName;
+      templateParams.email = senderEmail;
+      templateParams.subject = `Website message from ${senderName}`;
+      templateParams.sent_at = new Date().toISOString();
 
       try {
-        // Send notification to site owner / configured recipient (main template)
         await emailjs.send(serviceId, templateId, templateParams, publicKey);
-        toast({ title: 'Message sent', description: "Thanks — I'll get back to you soon." });
+
+        toast({
+          title: 'Message sent',
+          description: "Thanks — I'll get back to you soon.",
+        });
+
         formRef.current.reset();
 
-        // Attempt auto-reply to the user using the reply template if configured
-        if (replyTemplateId) {
-          const replyParams = {
-            user_name: templateParams.user_name,
-            user_email: templateParams.user_email,
-            message: templateParams.message,
-            to_email: templateParams.user_email,
-            reply_to: templateParams.user_email,
-          };
-
-          try {
-            await emailjs.send(serviceId, replyTemplateId, replyParams, publicKey);
-            // optional: show a subtle toast for auto-reply success
-            toast({ title: 'Auto-reply sent', description: 'Confirmation email sent to the user.' });
-          } catch (replyErr) {
-            // auto-reply failed; log but don't surface as main error
-            // eslint-disable-next-line no-console
-            console.error('EmailJS auto-reply error:', replyErr);
-          }
-        }
       } catch (err) {
         console.error('EmailJS error:', err);
-        toast({ title: 'Send failed', description: 'Could not send message. Try again later.' });
+        toast({
+          title: 'Send failed',
+          description: 'Could not send message. Try again later.',
+        });
       } finally {
         setSending(false);
       }
