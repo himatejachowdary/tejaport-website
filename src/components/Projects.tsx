@@ -33,7 +33,7 @@ const Projects = () => {
         "AI-powered symptom analysis tool providing predictions and health insights based on user inputs. Built with modern UI design and deployed as a responsive web application.",
       technologies: ["React", "Machine Learning", "API Integration", "TailwindCSS"],
       githubUrl: "https://symptoscanadv.netlify.app/",
-      featured: false,
+      featured: true,
     },
   ];
 
