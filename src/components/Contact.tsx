@@ -206,7 +206,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-slate-700">
           <p className="text-gray-400">
-            © 2025 Hima Teja Cherukumalli. Built with passion for data analytics and innovation.
+            © 2026 Hima Teja Cherukumalli. Built with passion for data analytics and innovation.
           </p>
         </div>
       </div>
