@@ -24,7 +24,7 @@ const Contact = () => {
       color: "hover:text-blue-400"
     },
     {
-      name: "GitHub", 
+      name: "GitHub",
       url: "https://github.com/himatejachowdary",
       icon: Github,
       color: "hover:text-gray-300"
@@ -149,7 +149,7 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-8"></div>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            I'm always excited to discuss data analytics, collaborate on projects, or explore new opportunities. 
+            I'm always excited to discuss data analytics, collaborate on projects, or explore new opportunities.
             Feel free to reach out!
           </p>
         </div>
@@ -205,8 +205,13 @@ const Contact = () => {
 
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-slate-700">
-          <p className="text-gray-400">
+          <p className="text-gray-400 mb-2">
             © 2026 Hima Teja Cherukumalli. Built with passion for data analytics and innovation.
+          </p>
+          <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
+            <span className="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse"></span>
+            Handcrafted with pure human code • No AI-generated content
+            <span className="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 animate-pulse"></span>
           </p>
         </div>
       </div>

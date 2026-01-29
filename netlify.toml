@@ -1,0 +1,33 @@
+# Netlify Configuration for Hima Teja Portfolio
+# Handcrafted with human code
+
+[build]
+  # Build command
+  command = "npm run build"
+  # Directory to publish (Vite outputs to 'dist')
+  publish = "dist"
+
+# Environment variables for build
+[build.environment]
+  NODE_VERSION = "18"
+
+# Redirects for SPA (Single Page Application)
+# This ensures React Router works correctly
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets aggressively
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
