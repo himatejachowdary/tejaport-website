@@ -1,3 +1,6 @@
+/* Import Google Fonts for premium typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,9 +9,6 @@
    HANDCRAFTED UI/UX DESIGN SYSTEM
    Created with passion by human developers
    ======================================== */
-
-/* Import Google Fonts for premium typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
@@ -195,6 +195,33 @@
     rgba(220, 230, 255, 0.6) 60%,
     transparent
   );
+}
+
+/* ========================================
+   WEATHER ANIMATION STYLES
+   ======================================== */
+
+@keyframes rainfall {
+  0% {
+    transform: translateY(-50px) translateX(0) rotate(15deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(25px) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.3; transform: scale(0.8); }
 }
 
 /* ========================================
