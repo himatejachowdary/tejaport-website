@@ -32,7 +32,7 @@ const Projects = () => {
       description:
         "AI-powered symptom analysis tool providing predictions and health insights based on user inputs. Built with modern UI design and deployed as a responsive web application.",
       technologies: ["React", "Machine Learning", "API Integration", "TailwindCSS"],
-      githubUrl: "https://symptoscanadv.netlify.app/",
+      githubUrl: "https://symptoscan.web.app/",
       featured: true,
     },
   ];
@@ -54,9 +54,8 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.title}
-              className={`group relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
-                project.featured ? "ring-2 ring-purple-400/30" : ""
-              }`}
+              className={`group relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${project.featured ? "ring-2 ring-purple-400/30" : ""
+                }`}
             >
               {project.featured && (
                 <div className="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
