@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -7,13 +7,15 @@ const Contact = () => {
     {
       label: "Email",
       value: "himatejacherukumalli0@gmail.com",
-      href: "mailto:himatejacherukumalli0@gmail.com"
+      href: "mailto:himatejacherukumalli0@gmail.com",
+      icon: Mail,
     },
     {
       label: "Location",
       value: "Hyderabad, India",
-      href: "#"
-    }
+      href: "#",
+      icon: MapPin,
+    },
   ];
 
   const socialLinks = [
@@ -21,20 +23,17 @@ const Contact = () => {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/himatejacherukumalli/",
       icon: Linkedin,
-      color: "hover:text-blue-400"
     },
     {
       name: "GitHub",
       url: "https://github.com/himatejachowdary",
       icon: Github,
-      color: "hover:text-gray-300"
     },
     {
       name: "Email",
       url: "mailto:himatejacherukumalli0@gmail.com",
       icon: Mail,
-      color: "hover:text-green-400"
-    }
+    },
   ];
 
   const ContactForm: React.FC = () => {
@@ -60,19 +59,19 @@ const Contact = () => {
         if (response.ok) {
           toast({
             title: "Message sent",
-            description: "Thanks — I'll get back to you soon.",
+            description: "Thank you for reaching out. I will respond soon.",
           });
           formRef.current.reset();
         } else {
           toast({
             title: "Send failed",
-            description: "Something went wrong. Try again later.",
+            description: "Something went wrong. Please try again.",
           });
         }
       } catch (error) {
         toast({
           title: "Send failed",
-          description: "Network issue. Try again later.",
+          description: "Network issue. Please try again later.",
         });
       }
 
@@ -80,15 +79,11 @@ const Contact = () => {
     };
 
     return (
-      <form
-        ref={formRef}
-        onSubmit={handleSubmit}
-        className="space-y-6"
-      >
+      <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
         <input type="hidden" name="form-name" value="contact" />
 
         <div>
-          <label htmlFor="name" className="block text-gray-300 text-sm font-medium mb-2">
+          <label htmlFor="name" className="block text-xs font-mono uppercase tracking-wider text-[#5e554a] mb-1.5">
             Name
           </label>
           <input
@@ -96,13 +91,13 @@ const Contact = () => {
             id="name"
             name="user_name"
             required
-            className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors duration-300"
-            placeholder="Your Name"
+            className="w-full h-11 px-3.5 bg-[#ffffff] border border-[#1f1b16]/[0.12] rounded-lg text-sm text-[#1f1b16] placeholder-[#7b7266]/70 focus:outline-none focus:border-[#15803d] focus:ring-1 focus:ring-[#15803d] transition-colors duration-150"
+            placeholder="Your name"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-gray-300 text-sm font-medium mb-2">
+          <label htmlFor="email" className="block text-xs font-mono uppercase tracking-wider text-[#5e554a] mb-1.5">
             Email
           </label>
           <input
@@ -110,67 +105,83 @@ const Contact = () => {
             id="email"
             name="user_email"
             required
-            className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors duration-300"
+            className="w-full h-11 px-3.5 bg-[#ffffff] border border-[#1f1b16]/[0.12] rounded-lg text-sm text-[#1f1b16] placeholder-[#7b7266]/70 focus:outline-none focus:border-[#15803d] focus:ring-1 focus:ring-[#15803d] transition-colors duration-150"
             placeholder="your.email@example.com"
           />
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-gray-300 text-sm font-medium mb-2">
+          <label htmlFor="message" className="block text-xs font-mono uppercase tracking-wider text-[#5e554a] mb-1.5">
             Message
           </label>
           <textarea
             id="message"
             name="message"
-            rows={5}
+            rows={4}
             required
-            className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors duration-300"
-            placeholder="Your message here..."
-          ></textarea>
+            className="w-full p-3.5 bg-[#ffffff] border border-[#1f1b16]/[0.12] rounded-lg text-sm text-[#1f1b16] placeholder-[#7b7266]/70 focus:outline-none focus:border-[#15803d] focus:ring-1 focus:ring-[#15803d] transition-colors duration-150 resize-y"
+            placeholder="Your message"
+          />
         </div>
 
         <button
           type="submit"
           disabled={sending}
-          className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-60"
+          className="w-full h-11 px-6 bg-[#1f1b16] text-[#fdfbf7] text-sm font-medium rounded-lg hover:bg-[#332e26] active:scale-[0.98] transition-colors duration-150 disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1f1b16]"
         >
-          {sending ? "Sending..." : "Send Message"}
+          {sending ? "Sending..." : "Send message"}
         </button>
       </form>
     );
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Let's Connect
+    <section id="contact" className="py-20 px-6 lg:px-8 border-t border-[#1f1b16]/[0.08] bg-[#f7f4ee]">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-12">
+          <div className="font-mono text-xs text-[#7b7266] uppercase tracking-wider mb-2">
+            Inquiries
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-[#1f1b16] mb-3">
+            Contact
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            I'm always excited to discuss data analytics, collaborate on projects, or explore new opportunities.
-            Feel free to reach out!
+          <p className="text-base text-[#5e554a] max-w-2xl">
+            Available for fresher data analyst, machine learning engineer, and developer roles.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          {/* Contact Details & Links */}
+          <div className="lg:col-span-5 space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Get in Touch</h3>
-              <div className="space-y-4">
+              <h3 className="text-base font-medium text-[#1f1b16] mb-4">
+                Direct channels
+              </h3>
+              <div className="space-y-3">
                 {contactInfo.map((info) => (
-                  <div key={info.label} className="flex items-center space-x-4">
-                    <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+                  <div
+                    key={info.label}
+                    className="flex items-center space-x-3.5 bg-[#fdfbf7] border border-[#1f1b16]/[0.08] rounded-xl p-3.5"
+                  >
+                    <div className="p-2 rounded-lg bg-[#efe9df] text-[#1f1b16]">
+                      <info.icon size={16} strokeWidth={1.5} />
+                    </div>
                     <div>
-                      <span className="text-gray-400 text-sm">{info.label}</span>
-                      <a
-                        href={info.href}
-                        className="block text-white hover:text-blue-400 transition-colors duration-300"
-                      >
-                        {info.value}
-                      </a>
+                      <div className="font-mono text-[11px] text-[#7b7266]">
+                        {info.label}
+                      </div>
+                      {info.href !== "#" ? (
+                        <a
+                          href={info.href}
+                          className="text-sm font-medium text-[#1f1b16] hover:text-[#15803d] transition-colors duration-150"
+                        >
+                          {info.value}
+                        </a>
+                      ) : (
+                        <span className="text-sm font-medium text-[#1f1b16]">
+                          {info.value}
+                        </span>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -178,42 +189,47 @@ const Contact = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Follow Me</h3>
-              <div className="flex space-x-6">
+              <h3 className="text-base font-medium text-[#1f1b16] mb-4">
+                Profiles
+              </h3>
+              <div className="flex items-center space-x-3">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-gray-400 ${social.color} transition-all duration-300 transform hover:scale-110`}
+                    className="p-2.5 bg-[#fdfbf7] border border-[#1f1b16]/[0.08] rounded-lg text-[#5e554a] hover:text-[#1f1b16] hover:border-[#1f1b16]/[0.2] transition-colors duration-150"
                     aria-label={social.name}
                   >
-                    <social.icon size={24} />
+                    <social.icon size={18} strokeWidth={1.5} />
                   </a>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-semibold text-white mb-6">Send a Message</h3>
+          {/* Form */}
+          <div className="lg:col-span-7 bg-[#fdfbf7] border border-[#1f1b16]/[0.08] rounded-xl p-6 sm:p-8 shadow-[0_1px_3px_rgba(31,27,22,0.03)]">
+            <h3 className="text-lg font-medium text-[#1f1b16] mb-1">
+              Send a note
+            </h3>
+            <p className="text-sm text-[#5e554a] mb-6">
+              Leave a message and I will reply to your email address directly.
+            </p>
             <ContactForm />
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="text-center mt-16 pt-8 border-t border-slate-700">
-          <p className="text-gray-400 mb-2">
-            © 2026 Hima Teja Cherukumalli. Built with passion for data analytics and innovation.
-          </p>
-          <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse"></span>
-            Handcrafted with pure human code • No AI-generated content
-            <span className="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 animate-pulse"></span>
-          </p>
-        </div>
+        {/* Quiet Footer without AI hype line */}
+        <footer className="mt-20 pt-8 border-t border-[#1f1b16]/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-[#7b7266]">
+          <div>
+            © 2026 Hima Teja Cherukumalli
+          </div>
+          <div>
+            Data Science & Analytics • Hyderabad, India
+          </div>
+        </footer>
       </div>
     </section>
   );
