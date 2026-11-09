@@ -1,118 +1,157 @@
 import React from 'react';
-import { Github, ArrowUp } from 'lucide-react';
+import { ArrowUpRight, Github, ExternalLink, FileText } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
+      figure: "Fig. 1",
+      method: "ARIMA time-series model",
       title: "Sales Forecasting using Time Series Analysis",
       description:
-        "Built a comprehensive sales forecasting model using Python and ARIMA methodology. Analyzed historical sales data to predict future trends with high accuracy, incorporating seasonal patterns and market fluctuations.",
+        "Time-series forecasting model using ARIMA methodology. Analyzed historical sales patterns, seasonal trends, and variance to project future operational sales demand.",
       technologies: ["Python", "ARIMA", "Pandas", "Matplotlib", "Scikit-learn"],
-      githubUrl: "https://himateja-sales-forecast.vercel.app/",
-      featured: true,
+      actionLabel: "View live project",
+      url: "https://himateja-sales-forecast.vercel.app/",
+      icon: ExternalLink,
     },
     {
+      figure: "Fig. 2",
+      method: "K-Means clustering & DAX",
       title: "Customer Segmentation Dashboard",
       description:
-        "Developed an interactive Power BI dashboard for customer segmentation analysis. Used clustering algorithms to identify distinct customer groups and created visualizations for business decision-making.",
+        "Interactive Power BI dashboard for demographic and transactional segmentation. Applied K-Means clustering algorithms to categorize behavioral groups for business reporting.",
       technologies: ["Power BI", "Python", "K-Means", "Pandas", "DAX"],
-      githubUrl: "https://github.com/himatejachowdary/customer-segmentation",
-      featured: true,
+      actionLabel: "View on GitHub",
+      url: "https://github.com/himatejachowdary/customer-segmentation",
+      icon: Github,
     },
     {
+      figure: "Fig. 3",
+      method: "BERT NLP & Streamlit",
+      title: "YouTube Comment Sentiment Analysis using BERT",
+      description:
+        "Natural language processing pipeline analyzing comment sentiment across YouTube videos using fine-tuned BERT transformers, presented via an interactive Streamlit dashboard. Accompanied by published IEEE research.",
+      technologies: ["Python", "BERT", "Streamlit", "Transformers", "NLP"],
+      actionLabel: "IEEE Paper & Code",
+      url: "https://github.com/himatejachowdary", // Ask user for exact link
+      icon: FileText,
+      needsUserLink: true,
+    },
+    {
+      figure: "Fig. 4",
+      method: "Solidity smart contracts",
       title: "Blockchain Voting System",
       description:
-        "Academic project exploring decentralized voting using Ethereum blockchain. Implemented smart contracts with Solidity to ensure transparent and tamper-proof voting mechanisms.",
+        "Decentralized voting architecture on Ethereum. Implemented immutable smart contracts with Solidity to ensure auditable, tamper-resistant ballot accounting.",
       technologies: ["Solidity", "Ethereum", "MetaMask", "Ganache", "Web3.js"],
-      githubUrl: "https://blockchain-voting-systems.netlify.app/",
-      featured: true,
+      actionLabel: "View live project",
+      url: "https://blockchain-voting-systems.netlify.app/",
+      icon: ExternalLink,
     },
     {
+      figure: "Fig. 5",
+      method: "Predictive classification",
       title: "Sympto Scan Advanced",
       description:
-        "AI-powered symptom analysis tool providing predictions and health insights based on user inputs. Built with modern UI design and deployed as a responsive web application.",
+        "Diagnostic symptom evaluation tool using classification models to calculate health indicators from structured patient input data.",
       technologies: ["React", "Machine Learning", "API Integration", "TailwindCSS"],
-      githubUrl: "https://symptoscan.web.app/",
-      featured: true,
+      actionLabel: "View live project",
+      url: "https://symptoscan.web.app/",
+      icon: ExternalLink,
     },
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 px-6 lg:px-8 border-t border-[#1f1b16]/[0.08] bg-[#f7f4ee]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Featured Projects
+        <div className="mb-12">
+          <div className="font-mono text-xs text-[#7b7266] uppercase tracking-wider mb-2">
+            Selected work
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-[#1f1b16] mb-3">
+            Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Showcasing my expertise in data analytics and blockchain through academic projects and real-world applications
+          <p className="text-base text-[#5e554a] max-w-2xl">
+            Selected analytical models, machine learning systems, and software applications built with reproducible code.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project) => (
             <div
               key={project.title}
-              className={`group relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${project.featured ? "ring-2 ring-purple-400/30" : ""
-                }`}
+              className="bg-[#fdfbf7] border border-[#1f1b16]/[0.08] rounded-xl p-6 sm:p-7 shadow-[0_1px_3px_rgba(31,27,22,0.03)] flex flex-col justify-between"
             >
-              {project.featured && (
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  Featured
+              <div>
+                {/* Signature detail: Report figure tag & method */}
+                <div className="flex items-center justify-between pb-3 border-b border-[#1f1b16]/[0.06] mb-4">
+                  <span className="font-mono text-xs font-medium text-[#1f1b16]">
+                    {project.figure}
+                  </span>
+                  <span className="font-mono text-[11px] text-[#7b7266] bg-[#efe9df] px-2 py-0.5 rounded">
+                    {project.method}
+                  </span>
                 </div>
-              )}
 
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-lg font-medium text-[#1f1b16] mb-2 leading-snug">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-sm text-[#5e554a] leading-relaxed mb-6">
                   {project.description}
                 </p>
+              </div>
 
-                <div className="flex flex-wrap gap-2">
+              <div>
+                {/* Tech tags */}
+                <div className="flex flex-wrap gap-1.5 mb-5">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm"
+                      className="font-mono text-[11px] text-[#5e554a] bg-[#efe9df] px-2 py-0.5 rounded"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between pt-4">
+                {/* Plain action link */}
+                <div className="pt-4 border-t border-[#1f1b16]/[0.06] flex items-center justify-between">
                   <a
-                    href={project.githubUrl}
+                    href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300"
+                    className="inline-flex items-center space-x-1.5 text-sm font-medium text-[#1f1b16] hover:text-[#15803d] transition-colors duration-150"
                   >
-                    <Github size={20} />
-                    <span>View Live Web</span>
+                    <project.icon size={15} strokeWidth={1.5} className="text-[#5e554a]" />
+                    <span>{project.actionLabel}</span>
                   </a>
 
-                  <ArrowUp
-                    className="text-purple-400 transform rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
-                    size={20}
-                  />
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#7b7266] hover:text-[#1f1b16] p-1 transition-colors duration-150"
+                    aria-label={`Open ${project.title}`}
+                  >
+                    <ArrowUpRight size={16} strokeWidth={1.5} />
+                  </a>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* Quiet GitHub repository link */}
+        <div className="mt-12 text-center">
           <a
             href="https://github.com/himatejachowdary?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center space-x-2 h-11 px-6 bg-[#1f1b16] text-[#fdfbf7] text-sm font-medium rounded-lg hover:bg-[#332e26] active:scale-[0.98] transition-colors duration-150"
           >
-            <Github size={20} />
-            <span>View All Projects</span>
+            <Github size={16} strokeWidth={1.5} />
+            <span>View all repositories on GitHub</span>
           </a>
         </div>
       </div>
