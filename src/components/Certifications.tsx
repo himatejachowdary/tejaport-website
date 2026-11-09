@@ -1,124 +1,121 @@
 import React from 'react';
-import { Award, Calendar, ArrowUp } from 'lucide-react';
+import { ArrowUpRight, Award } from 'lucide-react';
 
 const Certifications = () => {
   const certifications = [
     {
-      title: "Infosys Certified Software Programmer",
-      issuer: "Infosys Springboard",
-      date: "2024",
-      description: "Earned recognition for demonstrating core software development skills through Infosys Springboard. Covered topics including programming fundamentals, software engineering principles, and hands-on coding projects.",
-      skills: ["Software Development", "Problem Solving", "Programming Logic", "Software Engineering"],
-      credentialUrl: "https://www.linkedin.com/posts/himatejacherukumalli_infosys-certificate-activity-7295848267815272450--I4Q?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE04MlIBuWPvvIYtNfYp--0--ItENplktz8",
-      featured: false
-    },
-    {
-      title: "AWS Academy Graduate - AWS Academy Cloud Architecting",
+      title: "AWS Academy Graduate — Cloud Architecting",
       issuer: "Amazon Web Services (AWS)",
       date: "2024",
-      description: "Completed the AWS Academy Cloud Architecting course, gaining practical skills in designing resilient, high-performing, secure, and cost-optimized architectures on AWS. Covered services including EC2, S3, RDS, IAM, and VPC, along with architectural best practices.",
-      skills: ["AWS", "Cloud Architecture", "EC2", "VPC", "Solution Design", "Security"],
+      description:
+        "Practiced designing resilient, secure, and cost-optimized cloud architectures on AWS, covering core services including EC2, S3, RDS, IAM, and VPC networking.",
+      skills: ["AWS", "Cloud Architecture", "EC2", "VPC", "IAM", "S3"],
       credentialUrl: "https://www.credly.com/badges/e2265021-5011-4847-86fd-ef20c301a59c/public_url",
-      featured: true
     },
     {
       title: "Android Developer Virtual Certificate",
-      issuer: "Google For Developers",
+      issuer: "Google for Developers",
       date: "2024",
-      description: "Completed Android App Development Internship at Google, showcasing hands-on experience in building mobile applications.",
-      skills: ["Android Development", "Java & Kotlin", "Firebase Integration", "UI/UX Design", "Google Developer Tools"],
+      description:
+        "Completed Android Developer Virtual Certificate program covering mobile application architecture, Kotlin and Java development, and developer tooling.",
+      skills: ["Android SDK", "Kotlin", "Java", "Mobile Architecture", "APIs"],
       credentialUrl: "https://www.linkedin.com/posts/himatejacherukumalli_android-internship-google-activity-7259859151583887361-7hBX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE04MlIBuWPvvIYtNfYp--0--ItENplktz8/",
-      featured: true
+    },
+    {
+      title: "Infosys Certified Software Programmer",
+      issuer: "Infosys Springboard",
+      date: "2024",
+      description:
+        "Accreditation for software engineering principles, algorithm design, data structures, and hands-on coding problem-solving.",
+      skills: ["Software Engineering", "Algorithms", "Data Structures", "Python"],
+      credentialUrl: "https://www.linkedin.com/posts/himatejacherukumalli_infosys-certificate-activity-7295848267815272450--I4Q?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE04MlIBuWPvvIYtNfYp--0--ItENplktz8",
     },
     {
       title: "Introduction to Blockchain and Cryptocurrency",
-      issuer: "NPTEL - IIT Kharagpur",
+      issuer: "NPTEL — IIT Kharagpur",
       date: "2023",
-      description: "Academic certification covering blockchain fundamentals, cryptocurrency mechanisms, and smart contract development. Achieved distinction grade with hands-on project implementation.",
-      skills: ["Blockchain", "Ethereum", "Smart Contracts", "Cryptography", "DeFi"],
+      description:
+        "Academic certification covering distributed consensus, cryptography, cryptocurrency economics, and smart contract development with distinction.",
+      skills: ["Blockchain", "Ethereum", "Smart Contracts", "Cryptography"],
       credentialUrl: "https://nptel.ac.in/courses/106105220",
-      featured: false
-    }
+    },
   ];
 
   return (
-    <section id="certifications" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="certifications" className="py-20 px-6 lg:px-8 border-t border-[#1f1b16]/[0.08] bg-[#f7f4ee]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Professional Certifications
+        <div className="mb-12">
+          <div className="font-mono text-xs text-[#7b7266] uppercase tracking-wider mb-2">
+            Credentials
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-[#1f1b16] mb-3">
+            Certifications
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Industry-recognized certifications validating expertise in data analytics, cloud computing, and emerging technologies
+          <p className="text-base text-[#5e554a] max-w-2xl">
+            Accreditations in cloud infrastructure, software engineering, and decentralized protocols.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {certifications.map((cert) => (
             <div
               key={cert.title}
-              className={`group relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
-                cert.featured ? 'ring-2 ring-blue-400/30' : ''
-              }`}
+              className="bg-[#fdfbf7] border border-[#1f1b16]/[0.08] rounded-xl p-6 sm:p-7 shadow-[0_1px_3px_rgba(31,27,22,0.03)] flex flex-col justify-between"
             >
-              {cert.featured && (
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  Featured
-                </div>
-              )}
-
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                    <Award className="text-white" size={24} />
-                  </div>
-                </div>
-
-                <div className="flex-1 space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
+              <div>
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-medium text-[#1f1b16] leading-snug">
                       {cert.title}
                     </h3>
-                    <div className="flex items-center space-x-2 text-purple-400">
-                      <span className="font-medium">{cert.issuer}</span>
-                      <span className="text-gray-400">•</span>
-                      <div className="flex items-center space-x-1">
-                        <Calendar size={14} />
-                        <span className="text-sm">{cert.date}</span>
-                      </div>
+                    <div className="text-sm font-medium text-[#5e554a] mt-1">
+                      {cert.issuer}
                     </div>
                   </div>
+                  <span className="font-mono text-xs text-[#7b7266] bg-[#efe9df] px-2.5 py-1 rounded tabular-nums flex-shrink-0">
+                    {cert.date}
+                  </span>
+                </div>
 
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {cert.description}
-                  </p>
+                <p className="text-sm text-[#5e554a] leading-relaxed mb-6">
+                  {cert.description}
+                </p>
+              </div>
 
-                  <div className="flex flex-wrap gap-2">
-                    {cert.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded text-xs"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center justify-between pt-2">
-                    <a
-                      href={cert.credentialUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
+              <div>
+                {/* Tech tags */}
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {cert.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="font-mono text-[11px] text-[#5e554a] bg-[#efe9df] px-2 py-0.5 rounded"
                     >
-                      View Credential
-                    </a>
-                    <ArrowUp
-                      className="text-purple-400 transform rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
-                      size={16}
-                    />
-                  </div>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Plain action link */}
+                <div className="pt-4 border-t border-[#1f1b16]/[0.06] flex items-center justify-between">
+                  <a
+                    href={cert.credentialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-1.5 text-sm font-medium text-[#1f1b16] hover:text-[#15803d] transition-colors duration-150"
+                  >
+                    <Award size={15} strokeWidth={1.5} className="text-[#5e554a]" />
+                    <span>View credential</span>
+                  </a>
+
+                  <a
+                    href={cert.credentialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#7b7266] hover:text-[#1f1b16] p-1 transition-colors duration-150"
+                    aria-label={`Open credential for ${cert.title}`}
+                  >
+                    <ArrowUpRight size={16} strokeWidth={1.5} />
+                  </a>
                 </div>
               </div>
             </div>
